@@ -21,6 +21,7 @@ export function CoffeeItem({ item }: CoffeeItemProps) {
         <div className="buttons-wrapper">
           <QuantityControlsContainer>
             <button
+            type="button"
               onClick={
                 item.quantity > 1 ? () => handleSub(item.name) : undefined
               }
@@ -28,7 +29,7 @@ export function CoffeeItem({ item }: CoffeeItemProps) {
               <Minus size={14} />
             </button>
             <span>{item.quantity}</span>
-            <button onClick={() => handleSum(item.name)}>
+            <button type="button" onClick={() => handleSum(item.name)}>
               <Plus size={14} />
             </button>
           </QuantityControlsContainer>
